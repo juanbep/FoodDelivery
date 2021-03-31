@@ -3,25 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.domain;
+package co.unicauca.restaurant.commons.domain;
 
 /**
  *
  * @author Beca98
  */
-public class Customer extends User {
+public class Order {
 
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

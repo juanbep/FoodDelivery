@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.domain;
+package co.unicauca.restaurant.commons.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +84,10 @@ public class Menu {
     public void setAtrIdPlates(List<Plate> atrIdPlates) {
         this.atrIdPlates = atrIdPlates;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Menu{" + "atrIdMenu=" + atrIdMenu + ", atrNameMenu=" + atrNameMenu + ", atrRestaurantId=" + atrRestaurantId + ", atrIdPlates=" + atrIdPlates + '}';
+    }
 
 }

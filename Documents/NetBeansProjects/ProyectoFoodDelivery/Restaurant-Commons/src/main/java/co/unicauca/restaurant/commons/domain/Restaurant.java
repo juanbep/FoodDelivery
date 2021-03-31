@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.domain;
+package co.unicauca.restaurant.commons.domain;
 
 /**
  *
@@ -135,6 +135,11 @@ public class Restaurant {
 
     public void setAtrMenu(Menu atrMenu) {
         this.atrMenu = atrMenu;
+    }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" + "atrNitRest=" + atrNitRest + ", atrNameRest=" + atrNameRest + ", atrAddressRest=" + atrAddressRest + ", atrPhoneNumberRest=" + atrPhoneNumberRest + ", atrEmailRest=" + atrEmailRest + ", atrCityRest=" + atrCityRest + ", atrAdmiRest=" + atrAdmiRest + ", atrMenu=" + atrMenu + '}';
     }
 
 }
