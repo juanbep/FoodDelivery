@@ -13,8 +13,8 @@ package co.unicauca.restaurant.server.access;
 public interface IUserRepository {
 
     /**
-     * Busca un Usuario por su ceduka
-     * @param id cedula del usuario 
+     * Busca un Usuario por su identificacion
+     * @param id identificacion del usuario 
      * @return  objeto de tipo User 
      */
     
