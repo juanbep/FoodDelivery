@@ -9,6 +9,19 @@ package co.unicauca.restaurant.client.domain;
  *
  * @author Beca98
  */
-public class Customer extends User{
+public class Customer extends User {
+
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

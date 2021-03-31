@@ -14,11 +14,11 @@ public class User {
     /**
      * Nombre de usuario
      */
-    private String atrUsername;
+    private String atrUserName;
     /**
-     * Cedula
+     * Identificacion
      */
-    private String atrIdentificacion;
+    private String atrIdentification;
     /**
      * Nombres
      */
@@ -32,19 +32,19 @@ public class User {
      */
     private String atrPassword;
     /**
-     * Ciudad de Origen
+     * Ciudad de Residencia
      */
     private String atrCity;
     /**
-     * Direccion de Residencia
+     * Dirección de residencia
      */
     private String atrAddress;
     /**
-     * Numero de celular
+     * Teléfono Móvil
      */
-    private String atrPhoneNumber;
+    private String atrPhone;
     /**
-     * Tipo de usuario(Puede ser un usuario con privilegios de administrador)
+     * Tipo de User (Admin or Customer)
      */
     private String atrType;
 
@@ -55,190 +55,100 @@ public class User {
     }
 
     /**
-     * Constructor Parametrizado
+     * Constructor parametrizado
      *
-     * @param atrUsername
-     * @param atrIdentificacion
+     * @param atrUserName
+     * @param atrIdentification
      * @param atrNames
      * @param atrLastNames
      * @param atrPassword
      * @param atrCity
-     * @param atrPhoneNumber
      * @param atrAddress
+     * @param atrPhone
      * @param atrType
      */
-    public User(String atrUsername, String atrIdentificacion, String atrNames, String atrLastNames, String atrPassword, String atrCity, String atrAddress, String atrPhoneNumber, String atrType) {
-        this.atrUsername = atrUsername;
-        this.atrIdentificacion = atrIdentificacion;
+    public User(String atrUserName, String atrIdentification, String atrNames, String atrLastNames, String atrPassword, String atrCity, String atrAddress, String atrPhone, String atrType) {
+        this.atrUserName = atrUserName;
+        this.atrIdentification = atrIdentification;
         this.atrNames = atrNames;
         this.atrLastNames = atrLastNames;
         this.atrPassword = atrPassword;
         this.atrCity = atrCity;
         this.atrAddress = atrAddress;
-        this.atrPhoneNumber = atrPhoneNumber;
+        this.atrPhone = atrPhone;
         this.atrType = atrType;
     }
 
-    /**
-     * Metodo set atrUsername
-     *
-     * @param atrUsername
-     */
-    public void setAtrUsername(String atrUsername) {
-        this.atrUsername = atrUsername;
+    public String getAtrUserName() {
+        return atrUserName;
     }
 
-    /**
-     * Metodo set atrIdentificacion
-     *
-     * @param atrIdentificacion
-     */
-    public void setAtrIdentificacion(String atrIdentificacion) {
-        this.atrIdentificacion = atrIdentificacion;
+    public void setAtrUserName(String atrUserName) {
+        this.atrUserName = atrUserName;
     }
 
-    /**
-     * Metodo set atrNames
-     *
-     * @param atrNames
-     */
-    public void setAtrNames(String atrNames) {
-        this.atrNames = atrNames;
+    public String getAtrIdentification() {
+        return atrIdentification;
     }
 
-    /**
-     * Metodo set atrLastNames
-     *
-     * @param atrLastNames
-     */
-    public void setAtrLastNames(String atrLastNames) {
-        this.atrLastNames = atrLastNames;
+    public void setAtrIdentification(String atrIdentification) {
+        this.atrIdentification = atrIdentification;
     }
 
-    /**
-     * Metodo set atrPassword
-     *
-     * @param atrPassword
-     */
-    public void setAtrPassword(String atrPassword) {
-        this.atrPassword = atrPassword;
-    }
-
-    /**
-     * Metodo set atrCity
-     *
-     * @param atrCity
-     */
-    public void setAtrCity(String atrCity) {
-        this.atrCity = atrCity;
-    }
-
-    /**
-     * Metodo set atrAddress
-     *
-     * @param atrAddress
-     */
-    public void setAtrAddress(String atrAddress) {
-        this.atrAddress = atrAddress;
-    }
-
-    /**
-     * Metodo set atrPhoneNumber
-     *
-     * @param atrPhoneNumber
-     */
-    public void setAtrPhoneNumber(String atrPhoneNumber) {
-        this.atrPhoneNumber = atrPhoneNumber;
-    }
-
-    /**
-     * Metodo set atrtType
-     *
-     * @param atrType
-     */
-    public void setAtrType(String atrType) {
-        this.atrType = atrType;
-    }
-
-    /**
-     * Metodo get atrUsername
-     *
-     * @return atrUsername
-     */
-    public String getAtrUsername() {
-        return atrUsername;
-    }
-
-    /**
-     * Metodo get atrIdentificacion
-     *
-     * @return atrIdentificacion
-     */
-    public String getAtrIdentificacion() {
-        return atrIdentificacion;
-    }
-
-    /**
-     * Metodo get atrNames
-     *
-     * @return atrNames
-     */
     public String getAtrNames() {
         return atrNames;
     }
 
-    /**
-     * Metodo get atrLastNames
-     *
-     * @return atrLastNames
-     */
+    public void setAtrNames(String atrNames) {
+        this.atrNames = atrNames;
+    }
+
     public String getAtrLastNames() {
         return atrLastNames;
     }
 
-    /**
-     * Metodo get atrPassword
-     *
-     * @return atrPassword
-     */
+    public void setAtrLastNames(String atrLastNames) {
+        this.atrLastNames = atrLastNames;
+    }
+
     public String getAtrPassword() {
         return atrPassword;
     }
 
-    /**
-     * Metodo get atrCity
-     *
-     * @return atrCity
-     */
+    public void setAtrPassword(String atrPassword) {
+        this.atrPassword = atrPassword;
+    }
+
     public String getAtrCity() {
         return atrCity;
     }
 
-    /**
-     * Metodo get atrAddress
-     *
-     * @return atrAddress
-     */
+    public void setAtrCity(String atrCity) {
+        this.atrCity = atrCity;
+    }
+
     public String getAtrAddress() {
         return atrAddress;
     }
 
-    /**
-     * Metodo get atrPhoneNumber
-     *
-     * @return atrPhoneNumber
-     */
-    public String getAtrPhoneNumber() {
-        return atrPhoneNumber;
+    public void setAtrAddress(String atrAddress) {
+        this.atrAddress = atrAddress;
     }
 
-    /**
-     * Metodo get atrType
-     *
-     * @return
-     */
+    public String getAtrPhone() {
+        return atrPhone;
+    }
+
+    public void setAtrPhone(String atrPhone) {
+        this.atrPhone = atrPhone;
+    }
+
     public String getAtrType() {
         return atrType;
+    }
+
+    public void setAtrType(String atrType) {
+        this.atrType = atrType;
     }
 
 }
