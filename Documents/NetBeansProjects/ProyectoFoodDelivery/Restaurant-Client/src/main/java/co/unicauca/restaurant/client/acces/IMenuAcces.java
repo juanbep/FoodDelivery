@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.domain;
+package co.unicauca.restaurant.client.acces;
 
 /**
  *
  * @author Beca98
  */
-public class Client extends User{
+public interface IMenuAcces {
     
 }

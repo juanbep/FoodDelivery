@@ -39,6 +39,10 @@ public class Restaurant {
      * Usuario Administrador del Restaurante
      */
     private String atrAdmiRest;
+    /**
+     * Menu que ofrece el restaurante
+     */
+    private Menu atrMenu;
 
     /**
      * Constructor por defecto
@@ -47,26 +51,7 @@ public class Restaurant {
     }
 
     /**
-     * Constructor parametrizado
-     *
-     * @param atrNitRest
-     * @param atrNameRest
-     * @param atrAddressRest
-     * @param atrPhoneNumberRest
-     * @param atrEmailRest
-     * @param atrCityRest
-     */
-    public Restaurant(String atrNitRest, String atrNameRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrCityRest) {
-        this.atrNitRest = atrNitRest;
-        this.atrNameRest = atrNameRest;
-        this.atrAddressRest = atrAddressRest;
-        this.atrPhoneNumberRest = atrPhoneNumberRest;
-        this.atrEmailRest = atrEmailRest;
-        this.atrCityRest = atrCityRest;
-    }
-
-    /**
-     * Constructor parametrizado secundario
+     * Constructor Parametrizado
      *
      * @param atrNitRest
      * @param atrNameRest
@@ -75,8 +60,9 @@ public class Restaurant {
      * @param atrEmailRest
      * @param atrCityRest
      * @param atrAdmiRest
+     * @param atrMenu
      */
-    public Restaurant(String atrNitRest, String atrNameRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrCityRest, String atrAdmiRest) {
+    public Restaurant(String atrNitRest, String atrNameRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrCityRest, String atrAdmiRest, Menu atrMenu) {
         this.atrNitRest = atrNitRest;
         this.atrNameRest = atrNameRest;
         this.atrAddressRest = atrAddressRest;
@@ -84,6 +70,7 @@ public class Restaurant {
         this.atrEmailRest = atrEmailRest;
         this.atrCityRest = atrCityRest;
         this.atrAdmiRest = atrAdmiRest;
+        this.atrMenu = atrMenu;
     }
 
     public String getAtrNitRest() {
@@ -114,6 +101,10 @@ public class Restaurant {
         return atrAdmiRest;
     }
 
+    public Menu getAtrMenu() {
+        return atrMenu;
+    }
+
     public void setAtrNitRest(String atrNitRest) {
         this.atrNitRest = atrNitRest;
     }
@@ -140,6 +131,10 @@ public class Restaurant {
 
     public void setAtrAdmiRest(String atrAdmiRest) {
         this.atrAdmiRest = atrAdmiRest;
+    }
+
+    public void setAtrMenu(Menu atrMenu) {
+        this.atrMenu = atrMenu;
     }
 
 }
