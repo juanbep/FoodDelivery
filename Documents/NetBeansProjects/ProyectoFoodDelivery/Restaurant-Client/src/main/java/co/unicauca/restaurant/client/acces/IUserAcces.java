@@ -5,10 +5,30 @@
  */
 package co.unicauca.restaurant.client.acces;
 
+import co.unicauca.restaurant.commons.domain.User;
+
 /**
  *
  * @author Beca98
  */
 public interface IUserAcces {
-    
+
+    /**
+     * Buscar un Usuario utlizando un socket
+     *
+     * @param id Id del Usuario 
+     * @return Objeto User
+     * @throws Exception
+     */
+    public User findUser(String id) throws Exception;
+
+    /**
+     * Crea un Usario
+     *
+     * @param user
+     * @return
+     * @throws Exception
+     */
+    public String createUser(User user) throws Exception;
+
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.acces;
+package co.unicauca.restaurant.client.infra;
 
 /**
  *
  * @author Beca98
  */
-public interface IMenuAcces {
+public class RestaurantSocket {
     
 }

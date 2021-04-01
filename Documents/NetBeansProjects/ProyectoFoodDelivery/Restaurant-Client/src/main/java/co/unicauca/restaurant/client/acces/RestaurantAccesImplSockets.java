@@ -3,12 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.domain.service;
+package co.unicauca.restaurant.client.acces;
 
 /**
  *
  * @author Beca98
  */
-public class AdminService {
+public class RestaurantAccesImplSockets {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
