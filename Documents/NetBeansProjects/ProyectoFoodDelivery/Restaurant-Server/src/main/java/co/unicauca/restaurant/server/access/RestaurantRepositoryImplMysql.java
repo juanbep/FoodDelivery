@@ -73,7 +73,7 @@ public class RestaurantRepositoryImplMysql implements IRestaurantRepository {
      * debido a que es implementado de la interfaz IRestaurantRepository.
      *
      * @param parRestaurant Objeto de tipo Restaurante.
-     * @return retorna un valor de especifico para el parametro parRestaurant
+     * @return retorna un valor especifico para el parametro parRestaurant
      * (ResId).
      */
     @Override
@@ -81,16 +81,16 @@ public class RestaurantRepositoryImplMysql implements IRestaurantRepository {
         try {
             this.connect();
             String sql = "INSERT INTO restaurante(NitRestaurant,NameRestaurant,CityRestaurant,AddressRestaurant,EmailRestaurant,PhoneNumberRestaurant,AdmiRestaurant) VALUES (?,?,?,?,?,?)";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, parRestaurant.getAtrNitRest());
-            pstmt.setString(2, parRestaurant.getAtrNameRest());
-            pstmt.setString(3, parRestaurant.getAtrCityRest());
-            pstmt.setString(4, parRestaurant.getAtrAddressRest());
-            pstmt.setString(5, parRestaurant.getAtrEmailRest());
-            pstmt.setString(6, parRestaurant.getAtrPhoneNumberRest());
-            pstmt.setString(7, parRestaurant.getAtrAdmiRest());
-            pstmt.executeUpdate();
-            pstmt.close();
+            try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, parRestaurant.getAtrNitRest());
+                pstmt.setString(2, parRestaurant.getAtrNameRest());
+                pstmt.setString(3, parRestaurant.getAtrCityRest());
+                pstmt.setString(4, parRestaurant.getAtrAddressRest());
+                pstmt.setString(5, parRestaurant.getAtrEmailRest());
+                pstmt.setString(6, parRestaurant.getAtrPhoneNumberRest());
+                pstmt.setString(7, parRestaurant.getAtrAdmiRest());
+                pstmt.executeUpdate();
+            }
             this.disconnect();
         } catch (SQLException ex) {
             Logger.getLogger(RestaurantRepositoryImplMysql.class.getName()).log(Level.SEVERE, "Error al insertar el registro", ex);
