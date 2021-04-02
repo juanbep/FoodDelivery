@@ -9,6 +9,6 @@ package co.unicauca.restaurant.server.access;
  *
  * @author Beca98
  */
-public class UserRepositoryImplArrays {
+public class OrderRepositoryImplMysql {
     
 }
