@@ -19,11 +19,11 @@ public interface IPlateRepository {
      * @param parPlate Objeto de tipo Plato.
      * @return valor especifico (platoId)
      */
-    public String createDish(Plate parPlate);
+    public String createPlate(Plate parPlate);
 
-    public String deleteDish();
+    public String deletePlate();
 
-    public String uptadeDish();
+    public String uptadePlate();
 
-    public String findDish();
+    public String findPlate();
 }
