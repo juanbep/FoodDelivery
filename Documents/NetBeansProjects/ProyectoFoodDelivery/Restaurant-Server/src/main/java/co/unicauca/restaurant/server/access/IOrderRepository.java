@@ -10,5 +10,12 @@ package co.unicauca.restaurant.server.access;
  * @author Beca98
  */
 public interface IOrderRepository {
-    
+
+    public String createOrder();
+
+    public String updateOrder();
+
+    public String deleteOrder();
+
+    public String findOrder();
 }

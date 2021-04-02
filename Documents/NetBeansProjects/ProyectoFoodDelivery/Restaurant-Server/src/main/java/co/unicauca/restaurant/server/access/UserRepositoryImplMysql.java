@@ -5,10 +5,26 @@
  */
 package co.unicauca.restaurant.server.access;
 
+import co.unicauca.restaurant.commons.domain.User;
+
 /**
  *
  * @author Beca98
  */
-public class UserRepositoryImplMysql {
+public class UserRepositoryImplMysql implements IUserRepository {
+
+    @Override
+    public User findUser(String id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String createUser(User user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
+    
     
 }

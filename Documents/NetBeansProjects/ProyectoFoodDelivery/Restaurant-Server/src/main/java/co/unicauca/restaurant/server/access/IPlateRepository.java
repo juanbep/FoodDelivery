@@ -5,10 +5,25 @@
  */
 package co.unicauca.restaurant.server.access;
 
+import co.unicauca.restaurant.commons.domain.Plate;
+
 /**
  *
  * @author Beca98
  */
 public interface IPlateRepository {
-    
+
+    /**
+     * Crea un nuevo plato.
+     *
+     * @param parPlate Objeto de tipo Plato.
+     * @return valor especifico (platoId)
+     */
+    public String createDish(Plate parPlate);
+
+    public String deleteDish();
+
+    public String uptadeDish();
+
+    public String findDish();
 }

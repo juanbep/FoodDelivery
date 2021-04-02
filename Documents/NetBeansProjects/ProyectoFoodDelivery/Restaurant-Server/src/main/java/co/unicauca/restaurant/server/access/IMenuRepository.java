@@ -5,10 +5,30 @@
  */
 package co.unicauca.restaurant.server.access;
 
+import co.unicauca.restaurant.commons.domain.Menu;
+
 /**
  *
  * @author Beca98
  */
-public class IMenuRepository {
-    
+public interface IMenuRepository {
+
+    /**
+     * Crea un nuevo menu.
+     *
+     * @param parMenu Objeto de tipo Menu.
+     * @return valor especifico IdMenu.
+     */
+    public String createMenu(Menu parMenu);
+
+    public String uptadeMenu();
+
+    public String deleteMenu();
+
+    public String findMenu();
+
+    public int connect();
+
+    public void disconnect();
+
 }
