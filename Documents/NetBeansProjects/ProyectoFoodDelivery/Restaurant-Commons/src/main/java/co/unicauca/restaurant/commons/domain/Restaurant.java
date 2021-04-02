@@ -20,6 +20,10 @@ public class Restaurant {
      */
     private String atrNameRest;
     /**
+     * Ciudad del Restaurante
+     */
+    private String atrCityRest;
+    /**
      * Direccion del Restaurante
      */
     private String atrAddressRest;
@@ -32,17 +36,13 @@ public class Restaurant {
      */
     private String atrEmailRest;
     /**
-     * Ciudad del Restaurante
-     */
-    private String atrCityRest;
-    /**
      * Usuario Administrador del Restaurante
      */
     private String atrAdmiRest;
     /**
-     * Menu que ofrece el restaurante
+     * Menu(s) que ofrece el restaurante
      */
-    private Menu atrMenu;
+    private Menu atrMenus;
 
     /**
      * Constructor por defecto
@@ -62,7 +62,7 @@ public class Restaurant {
      * @param atrAdmiRest
      * @param atrMenu
      */
-    public Restaurant(String atrNitRest, String atrNameRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrCityRest, String atrAdmiRest, Menu atrMenu) {
+    public Restaurant(String atrNitRest, String atrNameRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrCityRest, String atrAdmiRest, Menu atrMenus) {
         this.atrNitRest = atrNitRest;
         this.atrNameRest = atrNameRest;
         this.atrAddressRest = atrAddressRest;
@@ -70,7 +70,7 @@ public class Restaurant {
         this.atrEmailRest = atrEmailRest;
         this.atrCityRest = atrCityRest;
         this.atrAdmiRest = atrAdmiRest;
-        this.atrMenu = atrMenu;
+        this.atrMenus = atrMenus;
     }
 
     public String getAtrNitRest() {
@@ -102,7 +102,7 @@ public class Restaurant {
     }
 
     public Menu getAtrMenu() {
-        return atrMenu;
+        return atrMenus;
     }
 
     public void setAtrNitRest(String atrNitRest) {
@@ -134,12 +134,12 @@ public class Restaurant {
     }
 
     public void setAtrMenu(Menu atrMenu) {
-        this.atrMenu = atrMenu;
+        this.atrMenus = atrMenu;
     }
 
     @Override
     public String toString() {
-        return "Restaurant{" + "atrNitRest=" + atrNitRest + ", atrNameRest=" + atrNameRest + ", atrAddressRest=" + atrAddressRest + ", atrPhoneNumberRest=" + atrPhoneNumberRest + ", atrEmailRest=" + atrEmailRest + ", atrCityRest=" + atrCityRest + ", atrAdmiRest=" + atrAdmiRest + ", atrMenu=" + atrMenu + '}';
+        return "Restaurant{" + "atrNitRest=" + atrNitRest + ", atrNameRest=" + atrNameRest + ", atrAddressRest=" + atrAddressRest + ", atrPhoneNumberRest=" + atrPhoneNumberRest + ", atrEmailRest=" + atrEmailRest + ", atrCityRest=" + atrCityRest + ", atrAdmiRest=" + atrAdmiRest + ", atrMenus=" + atrMenus + '}';
     }
 
 }
