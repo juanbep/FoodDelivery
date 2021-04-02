@@ -5,30 +5,29 @@
  */
 package co.unicauca.restaurant.client.acces;
 
-import co.unicauca.restaurant.commons.domain.User;
+import co.unicauca.restaurant.commons.domain.Plate;
 
 /**
  *
  * @author Beca98
  */
-public interface IUserAcces {
+public interface IPlateAccess {
 
     /**
-     * Buscar un Usuario utlizando un socket
+     * Buscar un Plato utlizando un socket
      *
-     * @param id Id del Usuario 
-     * @return Objeto User
+     * @param id Id del plato
+     * @return Objeto Plate 
      * @throws Exception
      */
-    public User findUser(String id) throws Exception;
+    public Plate findPlate(String id) throws Exception;
 
     /**
-     * Crea un Usario
+     * Crea un Plato
      *
-     * @param user
+     * @param plate
      * @return
      * @throws Exception
      */
-    public String createUser(User user) throws Exception;
-
+    public String createPlate(Plate plate) throws Exception;
 }

@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Beca98
  */
-public interface IRestaurantAcces {
+public interface IRestaurantAccess {
 
     /**
      * Busca un restaurante utlizando un socket
