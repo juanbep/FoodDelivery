@@ -39,16 +39,16 @@ public class UserRepositoryImplMysql implements IUserRepository {
         this.connect();
         try {
             String sql = "SELECT * from Usuario where UserName=? ";
-            try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, parUserName);
                 ResultSet res = pstmt.executeQuery();
-                
+
                 if (res.next()) {
                     user = new User();
-                    user.setAtrUserName(res.getString("UserName"));
                     user.setAtrIdentification(res.getString("UserIdentification"));
                     user.setAtrLastNames(res.getString("UserNames"));
                     user.setAtrPassword(res.getString("UserLatsNames"));
+                    user.setAtrUserName(res.getString("UserName"));
                     user.setAtrNames(res.getString("UserPassword"));
                     user.setAtrCity(res.getString("UserCity"));
                     user.setAtrAddress(res.getString("UserAddress"));
@@ -74,12 +74,13 @@ public class UserRepositoryImplMysql implements IUserRepository {
     public String createUser(User parUser) {
         try {
             this.connect();
-            String sql = "INSERT INTO Usuario(UserName,UserIdentification,UserNames,UserLastNames,UserPassword,UserCity,UserAddress,UserPhone,UserType) VALUES (?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO Usuario(UserIdentification,UserNames,UserLastNames,UserName,UserPassword,UserCity,UserAddress,UserPhone,UserType) VALUES (?,?,?,?,?,?,?,?,?)";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                pstmt.setString(1, parUser.getAtrUserName());
-                pstmt.setString(2, parUser.getAtrIdentification());
-                pstmt.setString(3, parUser.getAtrNames());
-                pstmt.setString(4, parUser.getAtrLastNames());
+
+                pstmt.setString(1, parUser.getAtrIdentification());
+                pstmt.setString(2, parUser.getAtrNames());
+                pstmt.setString(3, parUser.getAtrLastNames());
+                pstmt.setString(4, parUser.getAtrUserName());
                 pstmt.setString(5, parUser.getAtrPassword());
                 pstmt.setString(6, parUser.getAtrCity());
                 pstmt.setString(7, parUser.getAtrAddress());
