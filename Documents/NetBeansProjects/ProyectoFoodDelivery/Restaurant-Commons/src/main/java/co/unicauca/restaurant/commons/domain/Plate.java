@@ -33,6 +33,11 @@ public class Plate {
     private String atrTypePlate;
 
     /**
+     * Id del menu al que pertenece el plato
+     */
+    private String atrMenuId;
+
+    /**
      * Constructor por defecto
      */
     public Plate() {
@@ -47,54 +52,63 @@ public class Plate {
      * @param atrPricePlate
      * @param atrDescriptionPlate
      * @param atrTypePlate
+     * @param atrMenuId
      */
-    public Plate(String atrIdPlate, String atrNamePlate, String atrPricePlate, String atrDescriptionPlate, String atrTypePlate) {
+    public Plate(String atrIdPlate, String atrNamePlate, String atrPricePlate, String atrDescriptionPlate, String atrTypePlate, String atrMenuId) {
         this.atrIdPlate = atrIdPlate;
         this.atrNamePlate = atrNamePlate;
         this.atrPricePlate = atrPricePlate;
         this.atrDescriptionPlate = atrDescriptionPlate;
         this.atrTypePlate = atrTypePlate;
-
+        this.atrMenuId = atrMenuId;
     }
 
     public String getAtrIdPlate() {
         return atrIdPlate;
     }
 
-    public String getAtrNamePlate() {
-        return atrNamePlate;
-    }
-
-    public String getAtrPricePlate() {
-        return atrPricePlate;
-    }
-
-    public String getAtrDescriptionPlate() {
-        return atrDescriptionPlate;
-    }
-
-    public String getAtrTypePlate() {
-        return atrTypePlate;
-    }
-
     public void setAtrIdPlate(String atrIdPlate) {
         this.atrIdPlate = atrIdPlate;
+    }
+
+    public String getAtrNamePlate() {
+        return atrNamePlate;
     }
 
     public void setAtrNamePlate(String atrNamePlate) {
         this.atrNamePlate = atrNamePlate;
     }
 
+    public String getAtrPricePlate() {
+        return atrPricePlate;
+    }
+
     public void setAtrPricePlate(String atrPricePlate) {
         this.atrPricePlate = atrPricePlate;
+    }
+
+    public String getAtrDescriptionPlate() {
+        return atrDescriptionPlate;
     }
 
     public void setAtrDescriptionPlate(String atrDescriptionPlate) {
         this.atrDescriptionPlate = atrDescriptionPlate;
     }
 
+    public String getAtrTypePlate() {
+        return atrTypePlate;
+    }
+
     public void setAtrTypePlate(String atrTypePlate) {
         this.atrTypePlate = atrTypePlate;
+    }
+
+    public String getAtrMenuId() {
+        return atrMenuId;
+    }
+
+    public void setAtrMenuId(String atrMenuId) {
+        this.atrMenuId = atrMenuId;
     }
 
     @Override
