@@ -6,6 +6,12 @@
 package co.unicauca.restaurant.server.access;
 
 import co.unicauca.restaurant.commons.domain.Menu;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,9 +19,35 @@ import co.unicauca.restaurant.commons.domain.Menu;
  */
 public class MenuRepositoryImplMysql implements IMenuRepository {
 
+    /**
+     * Objeto de tipo Connection, encargado de realizar la Conexion con Mysql.
+     */
+    private Connection conn;
+
+    /**
+     * Metodo encargado de crear un menu, este metodo se sobre escribe debido a
+     * que es implementado de la interfaz IMenuRepository.
+     *
+     * @param parMenu
+     * @return
+     */
     @Override
     public String createMenu(Menu parMenu) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            this.connect();
+            String sql = "INSERT INTO Menu(IdMenu, NameMenu, RestaurantId, IdPlates) VALUES (?,?,?)";
+            try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, parMenu.getAtrIdMenu());
+                pstmt.setString(2, parMenu.getAtrNameMenu());
+                pstmt.setString(3, parMenu.getAtrRestaurantId());
+
+                pstmt.executeUpdate();
+            }
+            this.disconnect();
+        } catch (SQLException ex) {
+            Logger.getLogger(IOrderRepository.class.getName()).log(Level.SEVERE, "Error al insertar el registro", ex);
+        }
+        return (parMenu.getAtrIdMenu());
     }
 
     @Override
@@ -42,5 +74,5 @@ public class MenuRepositoryImplMysql implements IMenuRepository {
     public void disconnect() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
