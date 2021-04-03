@@ -80,7 +80,7 @@ public class RestaurantRepositoryImplMysql implements IRestaurantRepository {
     public String createRestaurant(Restaurant parRestaurant) {
         try {
             this.connect();
-            String sql = "INSERT INTO restaurante(NitRestaurant,NameRestaurant,CityRestaurant,AddressRestaurant,EmailRestaurant,PhoneNumberRestaurant,AdmiRestaurant) VALUES (?,?,?,?,?,?)";
+            String sql = "INSERT INTO restaurante(IdRestaurant,NameRestaurant,CityRestaurant,AddressRestaurant,EmailRestaurant,PhoneNumberRestaurant,AdmiRestaurant) VALUES (?,?,?,?,?,?)";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, parRestaurant.getAtrNitRest());
                 pstmt.setString(2, parRestaurant.getAtrNameRest());
