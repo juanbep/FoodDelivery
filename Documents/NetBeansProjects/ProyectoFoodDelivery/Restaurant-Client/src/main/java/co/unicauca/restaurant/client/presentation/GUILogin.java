@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.presentation;
+
 
 
 
@@ -25,7 +25,7 @@ public class GUILogin extends javax.swing.JFrame {
     public GUILogin() {
         initComponents();
         setLocationRelativeTo(null);
-        Image icon = Toolkit.getDefaultToolkit().getImage("./src/main/java/resources/icon.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("./src/recursos/logo.png");
         this.setIconImage(icon);
     }
 
@@ -54,8 +54,9 @@ public class GUILogin extends javax.swing.JFrame {
         setTitle("Inicio de Sesión");
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.blue);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Food Delivery");
+        jLabel1.setText("Agencia de Viajes Demo");
         getContentPane().add(jLabel1, java.awt.BorderLayout.NORTH);
 
         pnlCentro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -109,6 +110,7 @@ public class GUILogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
+      
        
     }//GEN-LAST:event_btnAceptarActionPerformed
 
@@ -143,14 +145,6 @@ public class GUILogin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUILogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
