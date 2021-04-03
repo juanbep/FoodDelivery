@@ -5,6 +5,9 @@
  */
 package co.unicauca.restaurant.commons.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Beca98
@@ -40,9 +43,9 @@ public class Restaurant {
      */
     private String atrAdmiRest;
     /**
-     * Menu que ofrece el restaurante
+     * Menu(s) que ofrece el restaurante
      */
-    private Menu atrMenu;
+    private List<Menu> atrIdMenus;
 
     /**
      * Constructor por defecto
@@ -50,27 +53,15 @@ public class Restaurant {
     public Restaurant() {
     }
 
-    /**
-     * Constructor Parametrizado
-     *
-     * @param atrNitRest
-     * @param atrNameRest
-     * @param atrAddressRest
-     * @param atrPhoneNumberRest
-     * @param atrEmailRest
-     * @param atrCityRest
-     * @param atrAdmiRest
-     * @param atrMenu
-     */
-    public Restaurant(String atrNitRest, String atrNameRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrCityRest, String atrAdmiRest, Menu atrMenu) {
+    public Restaurant(String atrNitRest, String atrNameRest, String atrCityRest, String atrAddressRest, String atrPhoneNumberRest, String atrEmailRest, String atrAdmiRest, List<Menu> atrIdMenus) {
         this.atrNitRest = atrNitRest;
         this.atrNameRest = atrNameRest;
+        this.atrCityRest = atrCityRest;
         this.atrAddressRest = atrAddressRest;
         this.atrPhoneNumberRest = atrPhoneNumberRest;
         this.atrEmailRest = atrEmailRest;
-        this.atrCityRest = atrCityRest;
         this.atrAdmiRest = atrAdmiRest;
-        this.atrMenu = atrMenu;
+        this.atrIdMenus = new ArrayList<>();
     }
 
     public String getAtrNitRest() {
@@ -101,8 +92,8 @@ public class Restaurant {
         return atrAdmiRest;
     }
 
-    public Menu getAtrMenu() {
-        return atrMenu;
+    public List<Menu> getAtrIdMenus() {
+        return atrIdMenus;
     }
 
     public void setAtrNitRest(String atrNitRest) {
@@ -133,13 +124,13 @@ public class Restaurant {
         this.atrAdmiRest = atrAdmiRest;
     }
 
-    public void setAtrMenu(Menu atrMenu) {
-        this.atrMenu = atrMenu;
+    public void setAtrIdMenus(List<Menu> atrIdMenus) {
+        this.atrIdMenus = atrIdMenus;
     }
 
     @Override
     public String toString() {
-        return "Restaurant{" + "atrNitRest=" + atrNitRest + ", atrNameRest=" + atrNameRest + ", atrAddressRest=" + atrAddressRest + ", atrPhoneNumberRest=" + atrPhoneNumberRest + ", atrEmailRest=" + atrEmailRest + ", atrCityRest=" + atrCityRest + ", atrAdmiRest=" + atrAdmiRest + ", atrMenus=" + atrMenu + '}';
+        return "Restaurant{" + "atrNitRest=" + atrNitRest + ", atrNameRest=" + atrNameRest + ", atrCityRest=" + atrCityRest + ", atrAddressRest=" + atrAddressRest + ", atrPhoneNumberRest=" + atrPhoneNumberRest + ", atrEmailRest=" + atrEmailRest + ", atrAdmiRest=" + atrAdmiRest + ", atrIdMenus=" + atrIdMenus + '}';
     }
 
 }
