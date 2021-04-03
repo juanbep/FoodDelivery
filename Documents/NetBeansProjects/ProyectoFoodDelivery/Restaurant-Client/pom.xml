@@ -22,6 +22,12 @@
             <artifactId>Restaurant-Commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>co.edu.unicauca.restaurant.server</groupId>
+            <artifactId>Restaurant-Server</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
