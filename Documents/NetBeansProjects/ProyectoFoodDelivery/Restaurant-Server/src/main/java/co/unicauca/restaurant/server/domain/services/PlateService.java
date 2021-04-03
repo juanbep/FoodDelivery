@@ -35,7 +35,7 @@ public class PlateService {
     public PlateService() {
     }
 
-    public String CreateDish(Plate parPlate) {
+    public String CreatePlate(Plate parPlate) {
         List<JsonError> errors = new ArrayList<>();
         if (parPlate.getAtrIdPlate().isEmpty() || parPlate.getAtrNamePlate().isEmpty() || parPlate.getAtrPricePlate().isEmpty() || parPlate.getAtrDescriptionPlate().isEmpty() || parPlate.getAtrTypePlate().isEmpty()) {
             errors.add(new JsonError("400", "BAD_REQUEST", "TODOS LOS CAMPOS SON OBLIGATORIOS"));
