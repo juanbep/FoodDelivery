@@ -18,12 +18,6 @@
             <version>4.12</version>
         </dependency>
         <dependency>
-            <groupId>co.edu.unicauca.restaurant.server</groupId>
-            <artifactId>Restaurant-Server</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
             <groupId>co.edu.unicauca.restaurant.commons</groupId>
             <artifactId>Restaurant-Commons</artifactId>
             <version>1.0-SNAPSHOT</version>
