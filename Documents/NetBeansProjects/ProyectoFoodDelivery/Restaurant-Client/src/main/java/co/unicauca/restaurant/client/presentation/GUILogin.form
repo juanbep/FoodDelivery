@@ -33,7 +33,7 @@
           <Color blue="ff" green="0" id="blue" palette="1" red="0" type="palette"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Agencia de Viajes Demo"/>
+        <Property name="text" type="java.lang.String" value="FOOD DELIVEY"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">

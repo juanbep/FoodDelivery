@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.domain.service;
+package co.unicauca.restaurant.client.domain.services;
 
-import co.unicauca.restaurant.client.acces.IPlateAccess;
+import co.unicauca.restaurant.client.access.IPlateAccess;
 import co.unicauca.restaurant.commons.domain.Plate;
 
 /**

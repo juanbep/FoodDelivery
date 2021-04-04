@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package co.unicauca.restaurant.client.presentation;
 
 
-
-
+import co.unicauca.restaurant.client.domain.User;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
-
+import static co.unicauca.restaurant.client.infra.Messages.warningMessage;
 
 
 /**
@@ -25,7 +25,7 @@ public class GUILogin extends javax.swing.JFrame {
     public GUILogin() {
         initComponents();
         setLocationRelativeTo(null);
-        Image icon = Toolkit.getDefaultToolkit().getImage("./src/recursos/logo.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("./src/main/java/resources/icon.png");
         this.setIconImage(icon);
     }
 
@@ -56,7 +56,7 @@ public class GUILogin extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel1.setForeground(java.awt.Color.blue);
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Agencia de Viajes Demo");
+        jLabel1.setText("FOOD DELIVEY");
         getContentPane().add(jLabel1, java.awt.BorderLayout.NORTH);
 
         pnlCentro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -110,8 +110,21 @@ public class GUILogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-      
-       
+        co.unicauca.restaurant.client.infra.Security.usuario = new User(txtUsuario.getText(), txtContrasenia.getText(), "");
+        
+        //Aqui vendria el analizar si el usuario existe en el sistema
+        if (true) {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    GUIMenu ins = new GUIMenu();
+                    ins.setExtendedState(MAXIMIZED_BOTH);
+                    ins.setVisible(true);
+                }
+            });
+            this.dispose();
+        } else {
+            warningMessage("Contraseña incorrecta", "Atención");
+        }
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void txtContraseniaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraseniaKeyPressed
@@ -145,6 +158,14 @@ public class GUILogin extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUILogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

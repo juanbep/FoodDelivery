@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.restaurant.client.acces;
+package co.unicauca.restaurant.client.access;
 
 import co.unicauca.restaurant.commons.domain.Restaurant;
 import java.util.List;
