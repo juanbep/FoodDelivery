@@ -46,11 +46,13 @@ public class Menu {
      * @param atrRestaurantId
      * @param atrIdPlates
      */
-    public Menu(String atrIdMenu, String atrNameMenu, String atrRestaurantId, List<String> atrIdPlates) {
+    
+
+    public Menu(String atrIdMenu, String atrNameMenu, String atrRestaurantId, List<Plate> atrIdPlates) {
         this.atrIdMenu = atrIdMenu;
         this.atrNameMenu = atrNameMenu;
         this.atrRestaurantId = atrRestaurantId;
-        this.atrIdPlates = new ArrayList<>();
+        this.atrIdPlates = new ArrayList();
     }
 
     public String getAtrIdMenu() {
@@ -90,4 +92,5 @@ public class Menu {
         return "Menu{" + "atrIdMenu=" + atrIdMenu + ", atrNameMenu=" + atrNameMenu + ", atrRestaurantId=" + atrRestaurantId + ", atrIdPlates=" + atrIdPlates + '}';
     }
 
+   
 }
