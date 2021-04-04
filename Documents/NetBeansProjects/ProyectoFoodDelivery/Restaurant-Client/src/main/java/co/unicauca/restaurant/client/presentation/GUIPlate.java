@@ -12,12 +12,12 @@ import co.unicauca.restaurant.client.access.IUserAccess;
  * @author Libardo Pantoja
  *
  */
-public class GUIRestaurant extends javax.swing.JInternalFrame {
+public class GUIPlate extends javax.swing.JInternalFrame {
 
     /**
      * Constructor
      */
-    public GUIRestaurant() {
+    public GUIPlate() {
         initComponents();
 
         setSize(870, 500);
@@ -36,7 +36,7 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
                 + "El servidor devuelve el objeto Cliente consultado en formato JSON.<br>"
                 + "En el backend las cedulas desde 98000001 hasta 98000010.<br>"
                 + "</html>");
-        lblExplicacion.setText(sb.toString());
+        // lblExplicacion.setText(sb.toString());
     }
 
     /**
@@ -47,7 +47,6 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlCentro = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
@@ -55,35 +54,28 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
+        txtLastName1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtMobile = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        txtGender = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txtGender1 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         pnlSur = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
         pnlNorte = new javax.swing.JPanel();
-        lblExplicacion = new javax.swing.JLabel();
-        lblId = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
-        btnBuscar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Consultar Restaurantes");
+        setTitle("Crear Plato");
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setMaximumSize(new java.awt.Dimension(32767, 50000));
-        pnlCentro.setLayout(new java.awt.GridLayout(7, 2, 0, 2));
+        pnlCentro.setLayout(new java.awt.GridLayout(5, 2, 0, 2));
 
         lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblNombre.setText("Nit");
+        lblNombre.setText("IdPlate");
         pnlCentro.add(lblNombre);
 
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
@@ -94,34 +86,32 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
         pnlCentro.add(txtFirstName);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Name");
+        jLabel1.setText("NamePlate");
         pnlCentro.add(jLabel1);
         pnlCentro.add(txtLastName);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("City");
+        jLabel2.setText("PricePlate");
         pnlCentro.add(jLabel2);
-        pnlCentro.add(txtAddress);
+        pnlCentro.add(txtLastName1);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Address");
+        jLabel3.setText("DescriptionPlate");
         pnlCentro.add(jLabel3);
-        pnlCentro.add(txtMobile);
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        pnlCentro.add(jTextField1);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("PhoneNumber");
+        jLabel5.setText("TypePlate");
         pnlCentro.add(jLabel5);
-        pnlCentro.add(txtEmail);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("Email");
-        pnlCentro.add(jLabel6);
-        pnlCentro.add(txtGender);
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("Admin");
-        pnlCentro.add(jLabel7);
-        pnlCentro.add(txtGender1);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entrada", "Principio", "Proteina ", "Bebida" }));
+        pnlCentro.add(jComboBox1);
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
@@ -150,41 +140,10 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
         pnlNorte.setBorder(new javax.swing.border.MatteBorder(null));
         pnlNorte.setLayout(new java.awt.GridBagLayout());
 
-        lblExplicacion.setText("Buscar/Crear Restaurante ");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlNorte.add(lblExplicacion, gridBagConstraints);
-
-        lblId.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblId.setText("Nombre del Restaurante: ");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        pnlNorte.add(lblId, gridBagConstraints);
-
-        txtId.setText("Asados de la Abuela ");
-        txtId.setPreferredSize(new java.awt.Dimension(150, 32));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlNorte.add(txtId, gridBagConstraints);
-
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/buscar.png"))); // NOI18N
-        btnBuscar.setText("Buscar");
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlNorte.add(btnBuscar, gridBagConstraints);
+        jLabel4.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("CREAR PLATO");
+        pnlNorte.add(jLabel4, new java.awt.GridBagConstraints());
 
         getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);
 
@@ -194,34 +153,9 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
-    public String getTxtyId() {
-        return txtId.getText();
-    }
-
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        String id = txtId.getText().trim();
-
-        IUserAccess repo = Factory.getInstance().getUserService();
-        // Inyecta la dependencia
-        UserService userService = new UserService(repo);
-        if (id.equals("")) {
-            btnAgregar.setVisible(false);
-            txtFirstName.requestFocus();
-            return;
-        }
-
-        User customer;
-        try {
-            customer = userService.findUser(id);
-        } catch (Exception ex) {
-            clearControls();
-            successMessage(ex.getMessage(), "Atención");
-            btnAgregar.setVisible(true);
-            return;
-        }
-        clearControls();
-        showData(customer);
-    }//GEN-LAST:event_btnBuscarActionPerformed
+    // public String getTxtyId() {
+    // return txtId.getText();
+    //}
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         IUserAccess service = Factory.getInstance().getUserService();
@@ -229,18 +163,17 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
         UserService customerService = new UserService(service);
 
         User customer = new User();
-        customer.setAtrIdentification(txtId.getText());
+        // customer.setAtrIdentification(txtId.getText());
         customer.setAtrNames(txtFirstName.getText());
         customer.setAtrLastNames(txtLastName.getText());
-        customer.setAtrAddress(txtAddress.getText());
-        customer.setAtrPhone(txtEmail.getText());
-       
+        //  customer.setAtrAddress(txtAddress.getText());
+        // customer.setAtrPhone(txtEmail.getText());
 
         try {
             String response = customerService.createUser(customer);
-            successMessage("Cliente "+ response + " agregado con éxito.", "Atención");
+            successMessage("Cliente " + response + " agregado con éxito.", "Atención");
             clearControls();
-            txtId.setText("");
+            // txtId.setText("");
             btnAgregar.setVisible(false);
 
         } catch (Exception ex) {
@@ -253,6 +186,10 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
     private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFirstNameActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
     /**
      * Muestra los datos en el formulario
      *
@@ -270,10 +207,10 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
     public void clearControls() {
         txtFirstName.setText("");
         txtLastName.setText("");
-        txtAddress.setText("");
-        txtMobile.setText("");
-        txtEmail.setText("");
-        txtGender.setText("");
+        //     txtAddress.setText("");
+        //   txtMobile.setText("");
+        // txtEmail.setText("");
+        // txtGender.setText("");
     }
 
     public static void main(String[] args) {
@@ -284,28 +221,21 @@ public class GUIRestaurant extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCerrar;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel lblExplicacion;
-    private javax.swing.JLabel lblId;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JPanel pnlCentro;
     private javax.swing.JPanel pnlNorte;
     private javax.swing.JPanel pnlSur;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtGender;
-    private javax.swing.JTextField txtGender1;
-    private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMobile;
+    private javax.swing.JTextField txtLastName1;
     // End of variables declaration//GEN-END:variables
 
 }
