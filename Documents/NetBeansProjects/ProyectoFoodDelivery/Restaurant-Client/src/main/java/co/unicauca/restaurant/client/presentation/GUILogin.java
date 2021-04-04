@@ -40,7 +40,6 @@ public class GUILogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         pnlCentro = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
@@ -49,19 +48,17 @@ public class GUILogin extends javax.swing.JFrame {
         pnlSur = new javax.swing.JPanel();
         btnAceptar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
+        pnlNorth = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de Sesión");
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.blue);
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("FOOD DELIVEY");
-        getContentPane().add(jLabel1, java.awt.BorderLayout.NORTH);
-
-        pnlCentro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlCentro.setBackground(new java.awt.Color(255, 0, 0));
+        pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setLayout(new java.awt.GridLayout(2, 2));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Usuario:");
         pnlCentro.add(jLabel2);
@@ -69,6 +66,7 @@ public class GUILogin extends javax.swing.JFrame {
         txtUsuario.setText("Invitado");
         pnlCentro.add(txtUsuario);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Contraseña:");
         pnlCentro.add(jLabel3);
@@ -82,7 +80,8 @@ public class GUILogin extends javax.swing.JFrame {
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
-        pnlSur.setBorder(new javax.swing.border.MatteBorder(null));
+        pnlSur.setBackground(new java.awt.Color(255, 0, 0));
+        pnlSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnAceptar.setText("Aceptar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +101,17 @@ public class GUILogin extends javax.swing.JFrame {
 
         getContentPane().add(pnlSur, java.awt.BorderLayout.SOUTH);
 
+        pnlNorth.setBackground(new java.awt.Color(255, 0, 0));
+        pnlNorth.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("FOOD DELIVERY");
+        pnlNorth.add(jLabel1);
+
+        getContentPane().add(pnlNorth, java.awt.BorderLayout.NORTH);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -116,7 +126,7 @@ public class GUILogin extends javax.swing.JFrame {
         if (true) {
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    GUIMenu ins = new GUIMenu();
+                    GUIPanelOpciones ins = new GUIPanelOpciones();
                     ins.setExtendedState(MAXIMIZED_BOTH);
                     ins.setVisible(true);
                 }
@@ -190,6 +200,7 @@ public class GUILogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel pnlCentro;
+    private javax.swing.JPanel pnlNorth;
     private javax.swing.JPanel pnlSur;
     private javax.swing.JPasswordField txtContrasenia;
     private javax.swing.JTextField txtUsuario;

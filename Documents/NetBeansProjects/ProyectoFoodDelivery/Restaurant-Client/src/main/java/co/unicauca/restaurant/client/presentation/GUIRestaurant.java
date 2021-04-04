@@ -12,12 +12,12 @@ import co.unicauca.restaurant.client.access.IUserAccess;
  * @author Libardo Pantoja
  *
  */
-public class GUICustomer extends javax.swing.JInternalFrame {
+public class GUIRestaurant extends javax.swing.JInternalFrame {
 
     /**
      * Constructor
      */
-    public GUICustomer() {
+    public GUIRestaurant() {
         initComponents();
 
         setSize(870, 500);
@@ -64,10 +64,6 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         txtGender = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txtGender1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        txtGender2 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         pnlSur = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
@@ -80,14 +76,14 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Consulta de Clientes");
+        setTitle("Consultar Restaurantes");
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setMaximumSize(new java.awt.Dimension(32767, 50000));
-        pnlCentro.setLayout(new java.awt.GridLayout(9, 2, 0, 2));
+        pnlCentro.setLayout(new java.awt.GridLayout(7, 2, 0, 2));
 
         lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblNombre.setText("UserName");
+        lblNombre.setText("Nit");
         pnlCentro.add(lblNombre);
 
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
@@ -98,51 +94,34 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         pnlCentro.add(txtFirstName);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Identificacion");
+        jLabel1.setText("Name");
         pnlCentro.add(jLabel1);
         pnlCentro.add(txtLastName);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Names ");
+        jLabel2.setText("City");
         pnlCentro.add(jLabel2);
         pnlCentro.add(txtAddress);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("LastNames");
+        jLabel3.setText("Address");
         pnlCentro.add(jLabel3);
         pnlCentro.add(txtMobile);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Password");
+        jLabel5.setText("PhoneNumber");
         pnlCentro.add(jLabel5);
         pnlCentro.add(txtEmail);
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("City");
+        jLabel6.setText("Email");
         pnlCentro.add(jLabel6);
         pnlCentro.add(txtGender);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("Address");
+        jLabel7.setText("Admin");
         pnlCentro.add(jLabel7);
         pnlCentro.add(txtGender1);
-
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("PhoneNumber");
-        pnlCentro.add(jLabel8);
-        pnlCentro.add(txtGender2);
-
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText("Type");
-        pnlCentro.add(jLabel9);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer ", "Admin " }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        pnlCentro.add(jComboBox1);
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
@@ -171,7 +150,7 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         pnlNorte.setBorder(new javax.swing.border.MatteBorder(null));
         pnlNorte.setLayout(new java.awt.GridBagLayout());
 
-        lblExplicacion.setText("Buscar Usuario");
+        lblExplicacion.setText("Buscar Restaurante ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -180,13 +159,13 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         pnlNorte.add(lblExplicacion, gridBagConstraints);
 
         lblId.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblId.setText("Número de identificación:");
+        lblId.setText("Nombre del Restaurante: ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         pnlNorte.add(lblId, gridBagConstraints);
 
-        txtId.setText("98000001");
+        txtId.setText("Asados de la Abuela ");
         txtId.setPreferredSize(new java.awt.Dimension(150, 32));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -271,10 +250,6 @@ public class GUICustomer extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_btnAgregarActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
     private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFirstNameActionPerformed
@@ -302,7 +277,7 @@ public class GUICustomer extends javax.swing.JInternalFrame {
     }
 
     public static void main(String[] args) {
-        GUICustomer gui = new GUICustomer();
+        GUIRestaurant gui = new GUIRestaurant();
         gui.setVisible(true);
     }
 
@@ -311,15 +286,12 @@ public class GUICustomer extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCerrar;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblExplicacion;
     private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblNombre;
@@ -331,7 +303,6 @@ public class GUICustomer extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtGender1;
-    private javax.swing.JTextField txtGender2;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtLastName;
     private javax.swing.JTextField txtMobile;

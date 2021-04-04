@@ -9,6 +9,7 @@ import co.unicauca.restaurant.commons.infra.Utilities;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.Image;
 import java.awt.Toolkit;
+
 import static co.unicauca.restaurant.client.infra.Messages.warningMessage;
 import static co.unicauca.restaurant.client.infra.Messages.successMessage;
 
@@ -16,12 +17,12 @@ import static co.unicauca.restaurant.client.infra.Messages.successMessage;
  *
  * @author libardo
  */
-public class GUIMenu extends javax.swing.JFrame {
+public class GUIPanelOpciones extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUIMenu
+     * Creates new form GUICustomer
      */
-    public GUIMenu() {
+    public GUIPanelOpciones() {
         initComponents();
         //Poner el icono de la aplicación
         Image icon = Toolkit.getDefaultToolkit().getImage("./src/recursos/logo.png");
@@ -294,21 +295,23 @@ public class GUIMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPanelOpciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPanelOpciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPanelOpciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPanelOpciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                GUIMenu ins = new GUIMenu();
+                GUIPanelOpciones ins = new GUIPanelOpciones();
                 ins.setExtendedState(MAXIMIZED_BOTH);
                 ins.setVisible(true);
             }
