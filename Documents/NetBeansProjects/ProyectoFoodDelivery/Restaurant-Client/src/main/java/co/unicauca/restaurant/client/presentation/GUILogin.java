@@ -54,11 +54,9 @@ public class GUILogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de Sesión");
 
-        pnlCentro.setBackground(new java.awt.Color(255, 0, 0));
         pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setLayout(new java.awt.GridLayout(2, 2));
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Usuario:");
         pnlCentro.add(jLabel2);
@@ -66,7 +64,6 @@ public class GUILogin extends javax.swing.JFrame {
         txtUsuario.setText("Invitado");
         pnlCentro.add(txtUsuario);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Contraseña:");
         pnlCentro.add(jLabel3);
@@ -80,7 +77,6 @@ public class GUILogin extends javax.swing.JFrame {
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
-        pnlSur.setBackground(new java.awt.Color(255, 0, 0));
         pnlSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnAceptar.setText("Aceptar");
@@ -101,11 +97,9 @@ public class GUILogin extends javax.swing.JFrame {
 
         getContentPane().add(pnlSur, java.awt.BorderLayout.SOUTH);
 
-        pnlNorth.setBackground(new java.awt.Color(255, 0, 0));
         pnlNorth.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("FOOD DELIVERY");
         pnlNorth.add(jLabel1);
