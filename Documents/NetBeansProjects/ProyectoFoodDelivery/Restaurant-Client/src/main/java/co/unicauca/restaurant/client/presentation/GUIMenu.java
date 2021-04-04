@@ -36,7 +36,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
                 + "El servidor devuelve el objeto Cliente consultado en formato JSON.<br>"
                 + "En el backend las cedulas desde 98000001 hasta 98000010.<br>"
                 + "</html>");
-       // lblExplicacion.setText(sb.toString());
+        // lblExplicacion.setText(sb.toString());
     }
 
     /**
@@ -53,16 +53,6 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         txtFirstName = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtMobile = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        txtGender = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txtGender1 = new javax.swing.JTextField();
         pnlSur = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
@@ -76,10 +66,10 @@ public class GUIMenu extends javax.swing.JInternalFrame {
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setMaximumSize(new java.awt.Dimension(32767, 50000));
-        pnlCentro.setLayout(new java.awt.GridLayout(7, 2, 0, 2));
+        pnlCentro.setLayout(new java.awt.GridLayout(2, 2, 0, 2));
 
         lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblNombre.setText("Id");
+        lblNombre.setText("IdMenu");
         pnlCentro.add(lblNombre);
 
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
@@ -90,34 +80,9 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         pnlCentro.add(txtFirstName);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Name");
+        jLabel1.setText("NameMenu");
         pnlCentro.add(jLabel1);
         pnlCentro.add(txtLastName);
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("City");
-        pnlCentro.add(jLabel2);
-        pnlCentro.add(txtAddress);
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Address");
-        pnlCentro.add(jLabel3);
-        pnlCentro.add(txtMobile);
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("PhoneNumber");
-        pnlCentro.add(jLabel5);
-        pnlCentro.add(txtEmail);
-
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("Email");
-        pnlCentro.add(jLabel6);
-        pnlCentro.add(txtGender);
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("Admin");
-        pnlCentro.add(jLabel7);
-        pnlCentro.add(txtGender1);
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
@@ -159,8 +124,8 @@ public class GUIMenu extends javax.swing.JInternalFrame {
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
-   // public String getTxtyId() {
-       // return txtId.getText();
+    // public String getTxtyId() {
+    // return txtId.getText();
     //}
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
@@ -169,18 +134,17 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         UserService customerService = new UserService(service);
 
         User customer = new User();
-       // customer.setAtrIdentification(txtId.getText());
+        // customer.setAtrIdentification(txtId.getText());
         customer.setAtrNames(txtFirstName.getText());
         customer.setAtrLastNames(txtLastName.getText());
-        customer.setAtrAddress(txtAddress.getText());
-        customer.setAtrPhone(txtEmail.getText());
-       
+        //  customer.setAtrAddress(txtAddress.getText());
+        // customer.setAtrPhone(txtEmail.getText());
 
         try {
             String response = customerService.createUser(customer);
-            successMessage("Cliente "+ response + " agregado con éxito.", "Atención");
+            successMessage("Cliente " + response + " agregado con éxito.", "Atención");
             clearControls();
-           // txtId.setText("");
+            // txtId.setText("");
             btnAgregar.setVisible(false);
 
         } catch (Exception ex) {
@@ -210,10 +174,10 @@ public class GUIMenu extends javax.swing.JInternalFrame {
     public void clearControls() {
         txtFirstName.setText("");
         txtLastName.setText("");
-        txtAddress.setText("");
-        txtMobile.setText("");
-        txtEmail.setText("");
-        txtGender.setText("");
+        //     txtAddress.setText("");
+        //   txtMobile.setText("");
+        // txtEmail.setText("");
+        // txtGender.setText("");
     }
 
     public static void main(String[] args) {
@@ -226,23 +190,13 @@ public class GUIMenu extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnCerrar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JPanel pnlCentro;
     private javax.swing.JPanel pnlNorte;
     private javax.swing.JPanel pnlSur;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtGender;
-    private javax.swing.JTextField txtGender1;
     private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMobile;
     // End of variables declaration//GEN-END:variables
 
 }
