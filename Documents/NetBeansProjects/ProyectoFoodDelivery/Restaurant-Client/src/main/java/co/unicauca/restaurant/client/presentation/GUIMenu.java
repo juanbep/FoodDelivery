@@ -52,7 +52,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         lblNombre = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         pnlSur = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
@@ -72,6 +72,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         lblNombre.setText("IdMenu");
         pnlCentro.add(lblNombre);
 
+        txtFirstName.setText("123456");
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFirstNameActionPerformed(evt);
@@ -82,7 +83,9 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("NameMenu");
         pnlCentro.add(jLabel1);
-        pnlCentro.add(txtLastName);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menú de la casa", "Menú gastronómico", "Menú de degustación", "Menú fijo", "Menú cerrado", "Menú ejecutivo", "Menú concertado", "Menú completo", "Menú sencillo", "Menú para llevar", "Menú cíclico", "Menú de platos sueltos y bebidas", "Menú largo y estrecho", "Menú corto y ancho" }));
+        pnlCentro.add(jComboBox1);
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
@@ -136,7 +139,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         User customer = new User();
         // customer.setAtrIdentification(txtId.getText());
         customer.setAtrNames(txtFirstName.getText());
-        customer.setAtrLastNames(txtLastName.getText());
+      //  customer.setAtrLastNames(txtLastName.getText());
         //  customer.setAtrAddress(txtAddress.getText());
         // customer.setAtrPhone(txtEmail.getText());
 
@@ -173,7 +176,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
 
     public void clearControls() {
         txtFirstName.setText("");
-        txtLastName.setText("");
+    //    txtLastName.setText("");
         //     txtAddress.setText("");
         //   txtMobile.setText("");
         // txtEmail.setText("");
@@ -189,6 +192,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnCerrar;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblNombre;
@@ -196,7 +200,6 @@ public class GUIMenu extends javax.swing.JInternalFrame {
     private javax.swing.JPanel pnlNorte;
     private javax.swing.JPanel pnlSur;
     private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName;
     // End of variables declaration//GEN-END:variables
 
 }
