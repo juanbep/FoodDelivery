@@ -19,7 +19,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuPaquetesPersonalizados">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Paquetes Personalizados"/>
+                <Property name="text" type="java.lang.String" value="Crear Restaurante "/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuPaquetesPersonalizadosActionPerformed"/>
@@ -29,7 +29,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuPaquetesTodoIncluido">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Paquetes todo incluido"/>
+                <Property name="text" type="java.lang.String" value="Buscar Restaurantes"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuPaquetesTodoIncluidoActionPerformed"/>
@@ -52,7 +52,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnuIngresosPorFecha">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresos por fecha"/>
+                <Property name="text" type="java.lang.String" value="*******"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuIngresosPorFechaActionPerformed"/>
@@ -75,7 +75,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnuConfiguracionTarifas">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Configuraci&#xf3;n de Tarifas"/>
+                <Property name="text" type="java.lang.String" value="Listar Restaurantes"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuConfiguracionTarifasActionPerformed"/>
@@ -85,7 +85,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuAgentes">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Agentes de viaje"/>
+                <Property name="text" type="java.lang.String" value="******"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuAgentesActionPerformed"/>

@@ -100,7 +100,7 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
         });
         mnuPaqueteTodoIncluido.add(mnuConsultarClientes);
 
-        mnuPaquetesPersonalizados.setText("Paquetes Personalizados");
+        mnuPaquetesPersonalizados.setText("Crear Restaurante ");
         mnuPaquetesPersonalizados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuPaquetesPersonalizadosActionPerformed(evt);
@@ -109,7 +109,7 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
         mnuPaqueteTodoIncluido.add(mnuPaquetesPersonalizados);
         mnuPaqueteTodoIncluido.add(jSeparator1);
 
-        mnuPaquetesTodoIncluido.setText("Paquetes todo incluido");
+        mnuPaquetesTodoIncluido.setText("Buscar Restaurantes");
         mnuPaquetesTodoIncluido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuPaquetesTodoIncluidoActionPerformed(evt);
@@ -129,7 +129,7 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
 
         mnuInformes.setText("Informes");
 
-        mnuIngresosPorFecha.setText("Ingresos por fecha");
+        mnuIngresosPorFecha.setText("*******");
         mnuIngresosPorFecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuIngresosPorFechaActionPerformed(evt);
@@ -149,7 +149,7 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
 
         mnuConfiguracion.setText("Configuracion");
 
-        mnuConfiguracionTarifas.setText("Configuración de Tarifas");
+        mnuConfiguracionTarifas.setText("Listar Restaurantes");
         mnuConfiguracionTarifas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuConfiguracionTarifasActionPerformed(evt);
@@ -158,7 +158,7 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
         mnuConfiguracion.add(mnuConfiguracionTarifas);
         mnuConfiguracion.add(jSeparator2);
 
-        mnuAgentes.setText("Agentes de viaje");
+        mnuAgentes.setText("******");
         mnuAgentes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuAgentesActionPerformed(evt);
