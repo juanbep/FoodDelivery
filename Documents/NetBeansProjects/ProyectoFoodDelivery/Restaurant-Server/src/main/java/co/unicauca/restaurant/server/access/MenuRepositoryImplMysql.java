@@ -35,7 +35,7 @@ public class MenuRepositoryImplMysql implements IMenuRepository {
     public String createMenu(Menu parMenu) {
         try {
             this.connect();
-            String sql = "INSERT INTO Menu(IdMenu, NameMenu, RestaurantId, IdPlates) VALUES (?,?,?)";
+            String sql = "INSERT INTO Menu(idMenu, nombreMenu, nitRest, IdPlates) VALUES (?,?,?)"; //que es idPlates?
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, parMenu.getAtrIdMenu());
                 pstmt.setString(2, parMenu.getAtrNameMenu());

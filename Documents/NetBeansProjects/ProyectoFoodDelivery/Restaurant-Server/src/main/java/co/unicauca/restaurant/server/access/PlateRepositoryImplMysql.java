@@ -36,7 +36,7 @@ public class PlateRepositoryImplMysql implements IPlateRepository {
     public String createPlate(Plate parPlate) {
         try {
             this.connect();
-            String sql = "INSERT INTO plato(IdPlate, NamePlate, PricePlate, DescriptionPlate, TypePlate) VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO plato(idPlato, nombrePlato, precioPlato, descripcionPlato, tipoPlato) VALUES (?,?,?,?,?)";
             PreparedStatement pstmt2;
             try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, parPlate.getAtrIdPlate());
@@ -45,7 +45,7 @@ public class PlateRepositoryImplMysql implements IPlateRepository {
                 pstmt.setString(4, parPlate.getAtrDescriptionPlate());
                 pstmt.setString(5, parPlate.getAtrTypePlate());
                 pstmt.executeUpdate();
-                String sql2 = "INSERT INTO Pertenece al Menu (MenuId) VALUES (?) ";
+                String sql2 = "INSERT INTO Pertenece al Menu (MenuId) VALUES (?) ";//TODO: CORREGIR AQUI
                 pstmt2 = conn2.prepareStatement(sql2);
                 pstmt2.setString(1, parPlate.getAtrMenuId());
                 pstmt2.executeUpdate();

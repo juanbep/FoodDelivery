@@ -47,18 +47,18 @@ public class RestaurantRepositoryImplMysql implements IRestaurantRepository {
         Restaurant restaurant = null;
         try {
             this.connect();
-            String sql = "SELECT * from Restaurante where RestNombre=? ";
+            String sql = "SELECT * from Restaurante where nombreRest=? ";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, restaurantId);
                 ResultSet res = pstmt.executeQuery();
                 if (res.next()) {
-                    restaurant.setAtrNitRest(res.getString("restaurantId"));
-                    restaurant.setAtrNameRest(res.getString("restaurantName"));
-                    restaurant.setAtrCityRest(res.getString("restaurantCity"));
-                    restaurant.setAtrAddressRest(res.getString("restaurantAddress"));
-                    restaurant.setAtrEmailRest(res.getString("restaurantEmail"));
-                    restaurant.setAtrPhoneNumberRest(res.getString("restaurantPhoneNumber"));
-                    restaurant.setAtrAdmiRest(res.getString("restaurantAdmin"));
+                    restaurant.setAtrNitRest(res.getString("nitRest"));
+                    restaurant.setAtrNameRest(res.getString("nombreRest"));
+                    restaurant.setAtrCityRest(res.getString("ciudadRest"));
+                    restaurant.setAtrAddressRest(res.getString("direccionRest"));
+                    restaurant.setAtrEmailRest(res.getString("emailRest"));
+                    restaurant.setAtrPhoneNumberRest(res.getString("telefonoRest"));
+                    restaurant.setAtrAdmiRest(res.getString("Adm_nom_usuPer"));
                 }
             }
             this.disconnect();
@@ -80,7 +80,7 @@ public class RestaurantRepositoryImplMysql implements IRestaurantRepository {
     public String createRestaurant(Restaurant parRestaurant) {
         try {
             this.connect();
-            String sql = "INSERT INTO restaurante(IdRestaurant,NameRestaurant,CityRestaurant,AddressRestaurant,EmailRestaurant,PhoneNumberRestaurant,AdmiRestaurant) VALUES (?,?,?,?,?,?)";
+            String sql = "INSERT INTO restaurante(nitRest,nombreRest,ciudadRest,direccionRest,emailRest,telefonoRest,Adm_nom_usuPer) VALUES (?,?,?,?,?,?)";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, parRestaurant.getAtrNitRest());
                 pstmt.setString(2, parRestaurant.getAtrNameRest());
@@ -113,13 +113,13 @@ public class RestaurantRepositoryImplMysql implements IRestaurantRepository {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet res = pstmt.executeQuery();
             while (res.next()) {
-                objRestaurant.setAtrNitRest(res.getString("restaurantId"));
-                objRestaurant.setAtrNameRest(res.getString("restaurantName"));
-                objRestaurant.setAtrCityRest(res.getString("restaurantCity"));
-                objRestaurant.setAtrAddressRest(res.getString("restaurantAddress"));
-                objRestaurant.setAtrEmailRest(res.getString("restaurantEmail"));
-                objRestaurant.setAtrPhoneNumberRest(res.getString("restaurantPhoneNumber"));
-                objRestaurant.setAtrAdmiRest(res.getString("restaurantAdmin"));
+                objRestaurant.setAtrNitRest(res.getString("nitRest"));
+                objRestaurant.setAtrNameRest(res.getString("nombreRest"));
+                objRestaurant.setAtrCityRest(res.getString("ciudadRest"));
+                objRestaurant.setAtrAddressRest(res.getString("direccionRest"));
+                objRestaurant.setAtrEmailRest(res.getString("emailRest"));
+                objRestaurant.setAtrPhoneNumberRest(res.getString("telefonoRest"));
+                objRestaurant.setAtrAdmiRest(res.getString("Adm_nom_usuPer"));
                 objList.add(objRestaurant);
                 objRestaurant = new Restaurant();
             }
