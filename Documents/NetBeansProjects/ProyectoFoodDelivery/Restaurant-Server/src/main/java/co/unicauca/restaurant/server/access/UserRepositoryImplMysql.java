@@ -38,22 +38,22 @@ public class UserRepositoryImplMysql implements IUserRepository {
         User user = null;
         this.connect();
         try {
-            String sql = "SELECT * from Usuario where UserName=? ";
+            String sql = "SELECT * from Usuario where nom_usuPer=? ";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, parUserName);
                 ResultSet res = pstmt.executeQuery();
 
                 if (res.next()) {
                     user = new User();
-                    user.setAtrIdentification(res.getString("UserIdentification"));
-                    user.setAtrLastNames(res.getString("UserNames"));
-                    user.setAtrPassword(res.getString("UserLatsNames"));
-                    user.setAtrUserName(res.getString("UserName"));
-                    user.setAtrNames(res.getString("UserPassword"));
-                    user.setAtrCity(res.getString("UserCity"));
-                    user.setAtrAddress(res.getString("UserAddress"));
-                    user.setAtrPhone(res.getString("UserPhone"));
-                    user.setAtrType(res.getString("UserType"));
+                    user.setAtrIdentification(res.getString("identificacionPer"));
+                    user.setAtrLastNames(res.getString("nombrePer"));
+                    user.setAtrPassword(res.getString("apellidoPer"));
+                    user.setAtrUserName(res.getString("nom_usuPer"));
+                    user.setAtrNames(res.getString("contraseñaPer"));
+                    user.setAtrCity(res.getString("ciudadPer"));
+                    user.setAtrAddress(res.getString("direccionPer"));
+                    user.setAtrPhone(res.getString("telefonoPer"));
+                    user.setAtrType(res.getString("tipoPer"));
                 }
             }
             this.disconnect();
@@ -74,7 +74,7 @@ public class UserRepositoryImplMysql implements IUserRepository {
     public String createUser(User parUser) {
         try {
             this.connect();
-            String sql = "INSERT INTO Usuario(UserIdentification,UserNames,UserLastNames,UserName,UserPassword,UserCity,UserAddress,UserPhone,UserType) VALUES (?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO Usuario(identificacionPer,nombrePer,apellidoPer,nom_usuPer,contraseñaPer,ciudadPer,direccionPer,telefonoPer,tipoPer) VALUES (?,?,?,?,?,?,?,?,?)";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
                 pstmt.setString(1, parUser.getAtrIdentification());
