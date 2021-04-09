@@ -74,7 +74,7 @@ public class UserRepositoryImplMysql implements IUserRepository {
     public String createUser(User parUser) {
         try {
             this.connect();
-            String sql = "INSERT INTO Usuario(identificacionPer,nombrePer,apellidoPer,nom_usuPer,contraseñaPer,ciudadPer,direccionPer,telefonoPer,tipoPer) VALUES (?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO Usuario(identificacionPer,nombrePer,apellidoPer,nom_usuPer,contrasenaPer,ciudadPer,direccionPer,telefonoPer,tipoPer) VALUES (?,?,?,?,?,?,?,?,?)";
             try ( PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
                 pstmt.setString(1, parUser.getAtrIdentification());

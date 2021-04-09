@@ -5,6 +5,8 @@
  */
 package co.unicauca.restaurant.server.app;
 
+import co.unicauca.restaurant.server.infra.RestaurantServerSocket;
+
 /**
  *
  * @author Beca98
@@ -15,8 +17,8 @@ public class RestaurantAplication {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-       
+        RestaurantServerSocket server = new RestaurantServerSocket();
+        server.start();
     }
 
 }
