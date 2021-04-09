@@ -216,11 +216,11 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnuPaquetesPersonalizadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPaquetesPersonalizadosActionPerformed
-        GUICustomizerPackage ins = GUICustomizerPackage.getInstancia();
-        ins.setMaximizable(true);
+       // GUICustomizerPackage ins = GUICustomizerPackage.getInstancia();
+     //   ins.setMaximizable(true);
 
-        dskEscritorio.add(ins);
-        ins.show();
+      //  dskEscritorio.add(ins);
+      //  ins.show();
     }//GEN-LAST:event_mnuPaquetesPersonalizadosActionPerformed
 
     private void mnuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSalirActionPerformed
@@ -261,11 +261,11 @@ public class GUIPanelOpciones extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicializarActionPerformed
 
     private void mnuPaquetesTodoIncluidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPaquetesTodoIncluidoActionPerformed
-        GUIAllInOnePackage ins = new GUIAllInOnePackage();
-        ins.setMaximizable(true);
+      //  GUIAllInOnePackage ins = new GUIAllInOnePackage();
+      //  ins.setMaximizable(true);
 
-        dskEscritorio.add(ins);
-        ins.show();
+       // dskEscritorio.add(ins);
+       // ins.show();
     }//GEN-LAST:event_mnuPaquetesTodoIncluidoActionPerformed
 
     private void mnuConsultarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuConsultarClientesActionPerformed

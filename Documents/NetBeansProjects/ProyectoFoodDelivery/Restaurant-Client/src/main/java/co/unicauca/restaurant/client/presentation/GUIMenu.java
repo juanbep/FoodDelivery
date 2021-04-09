@@ -69,7 +69,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         pnlCentro.setLayout(new java.awt.GridLayout(2, 2, 0, 2));
 
         lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblNombre.setText("IdMenu");
+        lblNombre.setText("IdPlate");
         pnlCentro.add(lblNombre);
 
         txtFirstName.setText("123456");
@@ -81,7 +81,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
         pnlCentro.add(txtFirstName);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("NameMenu");
+        jLabel1.setText("NamePlate");
         pnlCentro.add(jLabel1);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menú de la casa", "Menú gastronómico", "Menú de degustación", "Menú fijo", "Menú cerrado", "Menú ejecutivo", "Menú concertado", "Menú completo", "Menú sencillo", "Menú para llevar", "Menú cíclico", "Menú de platos sueltos y bebidas", "Menú largo y estrecho", "Menú corto y ancho" }));
@@ -116,7 +116,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
 
         jLabel4.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("CREAR MENU");
+        jLabel4.setText("CREAR PLATO");
         pnlNorte.add(jLabel4, new java.awt.GridBagConstraints());
 
         getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);

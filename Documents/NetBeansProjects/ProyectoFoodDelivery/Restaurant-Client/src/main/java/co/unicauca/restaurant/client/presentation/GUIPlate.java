@@ -142,7 +142,7 @@ public class GUIPlate extends javax.swing.JInternalFrame {
 
         jLabel4.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("CREAR PLATO");
+        jLabel4.setText("CREAR COMPONENTE");
         pnlNorte.add(jLabel4, new java.awt.GridBagConstraints());
 
         getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);

@@ -8,14 +8,14 @@ import javax.swing.JTable;
  * @author libardo Para que las celdas del jTable no sean editables, se usó este
  * tutorial: http://www.elprogramador.com.mx/celdas-no-editables-en-jtable/
  */
-public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
+public class GUIListaComponente extends javax.swing.JInternalFrame {
 
     private String accion;
 
     /**
      * Creates new form GUITiposVehiculo
      */
-    public GUIAllInOnePackage() {
+    public GUIListaComponente() {
         initComponents();
         inicializarTabla();
         btnGrabar.setEnabled(false);
@@ -42,7 +42,6 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlNorte = new javax.swing.JPanel();
         pnlCentro = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDatos = new JTable(){
@@ -58,30 +57,43 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
         btnGrabar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Paquetes Todo Incluido");
-
-        pnlNorte.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        pnlNorte.setLayout(new java.awt.GridLayout(9, 2));
-        getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);
+        setTitle("Lista de Componentes");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlCentro.setLayout(new java.awt.BorderLayout());
 
         tblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "SEL", "NOMBRE", "DESCRIPCIÒN", "PRECIO", "TIPO"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblDatos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 tblDatosMousePressed(evt);
@@ -89,13 +101,12 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tblDatos);
 
-        pnlCentro.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        pnlCentro.add(jScrollPane1, java.awt.BorderLayout.PAGE_START);
 
-        getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
+        getContentPane().add(pnlCentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 103, 890, 260));
 
         pnlSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/agregar.png"))); // NOI18N
         btnNuevo.setText("Nuevo");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,8 +115,7 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
         });
         pnlSur.add(btnNuevo);
 
-        btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grabar.png"))); // NOI18N
-        btnGrabar.setText("Grabar");
+        btnGrabar.setText("Agregar");
         btnGrabar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGrabarActionPerformed(evt);
@@ -113,7 +123,6 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
         });
         pnlSur.add(btnGrabar);
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/remove.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +131,6 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
         });
         pnlSur.add(btnEliminar);
 
-        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/cerrar.png"))); // NOI18N
         btnCerrar.setText("Cerrar");
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +139,12 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
         });
         pnlSur.add(btnCerrar);
 
-        getContentPane().add(pnlSur, java.awt.BorderLayout.SOUTH);
+        getContentPane().add(pnlSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 405, 894, -1));
+
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("FOOD DELIVERY");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -160,9 +173,9 @@ public class GUIAllInOnePackage extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGrabar;
     private javax.swing.JButton btnNuevo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel pnlCentro;
-    private javax.swing.JPanel pnlNorte;
     private javax.swing.JPanel pnlSur;
     private javax.swing.JTable tblDatos;
     // End of variables declaration//GEN-END:variables
