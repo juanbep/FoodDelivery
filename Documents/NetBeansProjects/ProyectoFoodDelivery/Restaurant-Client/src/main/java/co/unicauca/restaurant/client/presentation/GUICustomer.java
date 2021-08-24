@@ -47,8 +47,8 @@ public class GUICustomer extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
+        jLabel10 = new javax.swing.JLabel();
         pnlCentro = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
@@ -68,6 +68,7 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         txtGender2 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel11 = new javax.swing.JLabel();
         pnlSur = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
@@ -77,6 +78,8 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         txtId = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
 
+        jLabel10.setText("jLabel10");
+
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
@@ -84,11 +87,13 @@ public class GUICustomer extends javax.swing.JInternalFrame {
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setMaximumSize(new java.awt.Dimension(32767, 50000));
-        pnlCentro.setLayout(new java.awt.GridLayout(9, 2, 0, 2));
+        pnlCentro.setLayout(null);
 
-        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblNombre.setText("UserName");
+        lblNombre.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblNombre.setText("Usuario:");
         pnlCentro.add(lblNombre);
+        lblNombre.setBounds(182, 18, 77, 14);
 
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,46 +101,71 @@ public class GUICustomer extends javax.swing.JInternalFrame {
             }
         });
         pnlCentro.add(txtFirstName);
+        txtFirstName.setBounds(416, 15, 340, 20);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Identificacion");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setText("Identificacion:");
         pnlCentro.add(jLabel1);
+        jLabel1.setBounds(182, 56, 230, 14);
         pnlCentro.add(txtLastName);
+        txtLastName.setBounds(416, 53, 340, 20);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Names ");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("Nombres:");
         pnlCentro.add(jLabel2);
+        jLabel2.setBounds(182, 100, 68, 14);
         pnlCentro.add(txtAddress);
+        txtAddress.setBounds(416, 97, 340, 20);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("LastNames");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel3.setText("Apellidos:");
         pnlCentro.add(jLabel3);
+        jLabel3.setBounds(182, 145, 68, 14);
         pnlCentro.add(txtMobile);
+        txtMobile.setBounds(416, 142, 340, 20);
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Password");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel5.setText("Contraseña:");
         pnlCentro.add(jLabel5);
+        jLabel5.setBounds(182, 183, 68, 14);
         pnlCentro.add(txtEmail);
+        txtEmail.setBounds(416, 180, 340, 20);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("City");
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel6.setText("Ciudad:");
         pnlCentro.add(jLabel6);
+        jLabel6.setBounds(182, 221, 68, 14);
         pnlCentro.add(txtGender);
+        txtGender.setBounds(416, 218, 340, 20);
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("Address");
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel7.setText("Direccion:");
         pnlCentro.add(jLabel7);
+        jLabel7.setBounds(182, 259, 79, 14);
         pnlCentro.add(txtGender1);
+        txtGender1.setBounds(416, 256, 340, 20);
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("PhoneNumber");
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel8.setText("Telefono:");
         pnlCentro.add(jLabel8);
+        jLabel8.setBounds(182, 297, 52, 14);
         pnlCentro.add(txtGender2);
+        txtGender2.setBounds(416, 294, 340, 20);
 
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText("Type");
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel9.setText("Tipo:");
         pnlCentro.add(jLabel9);
+        jLabel9.setBounds(182, 335, 52, 14);
 
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer ", "Admin " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +173,9 @@ public class GUICustomer extends javax.swing.JInternalFrame {
             }
         });
         pnlCentro.add(jComboBox1);
+        jComboBox1.setBounds(416, 332, 94, 20);
+        pnlCentro.add(jLabel11);
+        jLabel11.setBounds(770, 332, 0, 0);
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
@@ -169,30 +202,16 @@ public class GUICustomer extends javax.swing.JInternalFrame {
         getContentPane().add(pnlSur, java.awt.BorderLayout.SOUTH);
 
         pnlNorte.setBorder(new javax.swing.border.MatteBorder(null));
-        pnlNorte.setLayout(new java.awt.GridBagLayout());
 
+        lblExplicacion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblExplicacion.setText("Buscar Usuario");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlNorte.add(lblExplicacion, gridBagConstraints);
 
+        lblId.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblId.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblId.setText("Número de identificación:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        pnlNorte.add(lblId, gridBagConstraints);
 
         txtId.setText("98000001");
         txtId.setPreferredSize(new java.awt.Dimension(150, 32));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlNorte.add(txtId, gridBagConstraints);
 
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/buscar.png"))); // NOI18N
         btnBuscar.setText("Buscar");
@@ -201,11 +220,37 @@ public class GUICustomer extends javax.swing.JInternalFrame {
                 btnBuscarActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlNorte.add(btnBuscar, gridBagConstraints);
+
+        javax.swing.GroupLayout pnlNorteLayout = new javax.swing.GroupLayout(pnlNorte);
+        pnlNorte.setLayout(pnlNorteLayout);
+        pnlNorteLayout.setHorizontalGroup(
+            pnlNorteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNorteLayout.createSequentialGroup()
+                .addGroup(pnlNorteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlNorteLayout.createSequentialGroup()
+                        .addGap(293, 293, 293)
+                        .addComponent(lblId)
+                        .addGap(31, 31, 31)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBuscar))
+                    .addGroup(pnlNorteLayout.createSequentialGroup()
+                        .addGap(383, 383, 383)
+                        .addComponent(lblExplicacion)))
+                .addContainerGap(226, Short.MAX_VALUE))
+        );
+        pnlNorteLayout.setVerticalGroup(
+            pnlNorteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNorteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblExplicacion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlNorteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscar)
+                    .addComponent(lblId))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);
 
@@ -313,6 +358,8 @@ public class GUICustomer extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCerrar;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;

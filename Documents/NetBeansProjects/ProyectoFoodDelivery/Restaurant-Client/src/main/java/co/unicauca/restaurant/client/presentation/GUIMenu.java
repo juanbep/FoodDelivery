@@ -66,11 +66,10 @@ public class GUIMenu extends javax.swing.JInternalFrame {
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlCentro.setMaximumSize(new java.awt.Dimension(32767, 50000));
-        pnlCentro.setLayout(new java.awt.GridLayout(2, 2, 0, 2));
 
+        lblNombre.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblNombre.setText("IdPlate");
-        pnlCentro.add(lblNombre);
+        lblNombre.setText("Id Menu:");
 
         txtFirstName.setText("123456");
         txtFirstName.addActionListener(new java.awt.event.ActionListener() {
@@ -78,14 +77,41 @@ public class GUIMenu extends javax.swing.JInternalFrame {
                 txtFirstNameActionPerformed(evt);
             }
         });
-        pnlCentro.add(txtFirstName);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("NamePlate");
-        pnlCentro.add(jLabel1);
+        jLabel1.setText("Nombre del Menu:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menú de la casa", "Menú gastronómico", "Menú de degustación", "Menú fijo", "Menú cerrado", "Menú ejecutivo", "Menú concertado", "Menú completo", "Menú sencillo", "Menú para llevar", "Menú cíclico", "Menú de platos sueltos y bebidas", "Menú largo y estrecho", "Menú corto y ancho" }));
-        pnlCentro.add(jComboBox1);
+
+        javax.swing.GroupLayout pnlCentroLayout = new javax.swing.GroupLayout(pnlCentro);
+        pnlCentro.setLayout(pnlCentroLayout);
+        pnlCentroLayout.setHorizontalGroup(
+            pnlCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCentroLayout.createSequentialGroup()
+                .addGap(233, 233, 233)
+                .addGroup(pnlCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNombre)
+                    .addComponent(jLabel1))
+                .addGap(70, 70, 70)
+                .addGroup(pnlCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(90, 90, 90))
+        );
+        pnlCentroLayout.setVerticalGroup(
+            pnlCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCentroLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(pnlCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombre)
+                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(pnlCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
 
         getContentPane().add(pnlCentro, java.awt.BorderLayout.CENTER);
 
@@ -116,7 +142,7 @@ public class GUIMenu extends javax.swing.JInternalFrame {
 
         jLabel4.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("CREAR PLATO");
+        jLabel4.setText("CREAR MENU");
         pnlNorte.add(jLabel4, new java.awt.GridBagConstraints());
 
         getContentPane().add(pnlNorte, java.awt.BorderLayout.NORTH);

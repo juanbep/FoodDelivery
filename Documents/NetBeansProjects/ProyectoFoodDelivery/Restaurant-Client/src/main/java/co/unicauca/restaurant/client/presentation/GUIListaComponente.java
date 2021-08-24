@@ -63,7 +63,7 @@ public class GUIListaComponente extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setTitle("Lista de Componentes");
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         pnlCentro.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         pnlCentro.setLayout(new java.awt.BorderLayout());
@@ -103,7 +103,8 @@ public class GUIListaComponente extends javax.swing.JInternalFrame {
 
         pnlCentro.add(jScrollPane1, java.awt.BorderLayout.PAGE_START);
 
-        getContentPane().add(pnlCentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 103, 890, 260));
+        getContentPane().add(pnlCentro);
+        pnlCentro.setBounds(6, 103, 890, 260);
 
         pnlSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -139,12 +140,14 @@ public class GUIListaComponente extends javax.swing.JInternalFrame {
         });
         pnlSur.add(btnCerrar);
 
-        getContentPane().add(pnlSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 405, 894, -1));
+        getContentPane().add(pnlSur);
+        pnlSur.setBounds(0, 405, 894, 35);
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("FOOD DELIVERY");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(350, 10, 194, 32);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
